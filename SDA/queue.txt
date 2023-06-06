@@ -1,0 +1,28 @@
+Imobilul 1:
+Proprietarul: Catalin
+Tipul: Casa
+Adresa: Chisinau
+Suprafata: 89.00
+Costul: 90000.00
+
+Imobilul 2:
+Proprietarul: Sergiu
+Tipul: Apartament
+Adresa: Durlesti
+Suprafata: 75.00
+Costul: 42000.00
+
+Imobilul 3:
+Proprietarul: Ion
+Tipul: Penthouse
+Adresa: Kiev
+Suprafata: 204.00
+Costul: 1010000.00
+
+Imobilul 4:
+Proprietarul: Maria
+Tipul: Dacie
+Adresa: Chisinau
+Suprafata: 104.00
+Costul: 94340.00
+
