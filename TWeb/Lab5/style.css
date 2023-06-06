@@ -1,0 +1,121 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "Sofia", sans-serif;
+    font-size: 16px;
+}
+
+
+header {
+    background-color: rgb(222, 155, 155);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+main {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.function-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.function-list li {
+    margin: 0 0 1rem;
+    padding: 0;
+}
+
+.function-adress {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: rgb(222, 155, 155);
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(167, 19, 19, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.function-link:hover {
+    background-color: #f5f5f5;
+}
+
+.function-info {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.function-info h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.function-info p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    css main {
+        padding: 1rem;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .function-link {
+        padding: 0.25rem;
+        font-size: 0.9rem;
+    }
+
+    .function-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .function-info p {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+
+}

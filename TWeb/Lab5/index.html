@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHP : function guide</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia:400,700">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".function-adress").click(function() {
+				var functionName = $(this).attr("data-function-name");
+				$.ajax({
+					url: "function.php",
+					method: "POST",
+					data: { functionName: functionName },
+					success: function(response) {
+						$("#function").html(response);
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<h1>PHP : function guide</h1>
+	</header>
+	<main>
+		<div class="container">
+			<ul class="function-list">
+				<li><span class="function-adress" data-function-name="fprintf">fprintf</span></li>
+				<li><span class="function-adress" data-function-name="get_class">get_class</span></li>
+				<li><span class="function-adress" data-function-name="array_fill">array_fill</span></li>
+                <li><span class="function-adress" data-function-name="implode">implode</span></li>
+                <li><span class="function-adress" data-function-name="array_pop">array_pop</span></li>
+                <li><span class="function-adress" data-function-name="array_replace">array_replace</span></li>
+                <li><span class="function-adress" data-function-name="strrev">strrev</span></li>
+                <li><span class="function-adress" data-function-name="trim">trim</span></li>
+			</ul>
+			<div id="function" class="function">
+				<p>Tap a function to see information about it</p>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
