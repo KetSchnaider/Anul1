@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+  <body background="snow.gif"></body>
+  <h1>
+    <center>Mașină Turing</center>
+  </h1>
+  <p align="justify">
+    <b>Mașinile Turing</b> sunt mecanisme extrem de elementare de dispozitive de prelucrare a simbolurilor care — în ciuda simplității lor — pot fi adaptate pentru a simula logica oricărui calculator ce poate fi construit. Modelele au fost descrise în 1936 de către <b><i>Alan Turing</b></i>.</p>
+  <p align="justify">
+    O mașină Turing capabilă de a simula orice altă mașină Turing se numește mașină Turing universală (sau mașină universală). O definiție mai orientată matematic a fost introdusă de Alonzo Church, ale cărui lucrări din domeniul calculului lambda s-au împletit cu cele ale lui Turing într-o teorie formală a calculului cunoscută sub numele de Conjectura Church-Turing. Aceasta postulează că orice problemă de calcul bazată pe o procedură algoritmică poate fi rezolvată de către o mașină Turing. Deoarece nu se bazează pe o definiție precisă a conceptului de procedură algoritmică, nu are o formulare matematică. În schimb, este posibil de a se defini o noțiune de "sistem acceptabil de programare" și de a se demonstra că "puterea de calcul" a unui asemenea sistem este echivalentă cu cea a unei mașini Turing (se vorbește în acest caz de un limbaj de programare Turing-complet).</p>
+  
+<img src="turing.jpeg" alt="turing">
+  <h2>
+    <center>Definitie</center>
+  </h2>
+<p align="justify">
+  La origine, conceptul de mașină Turing reprezenta o persoană virtuală executând o procedură bine definită, schimbând conținutul căsuțelor unui tablou infinit (vizualizat sub forma unei "benzi" infinite), plasând în aceste căsuțe <b>simboluri</b> luate dintr-un ansamblu finit de simboluri. Pe de altă parte, această persoană trebuie să memoreze "starea" în care se află sistemul (sistemul "persoană" poate ocupa un număr finit de "stări"). Procedura poate fi exemplificată de o manieră foarte simplă printr-o listă de instrucțiuni, de genul : <i>dacă sunteți în starea 42 și dacă simbolul din căsuța pe care o priviți este '0', atunci înlocuiți acest simbol printr-un '1', treceți în starea 17, și priviți căsuța alăturată (dreapta sau stânga)</i> .</p>
+  
+<p align="justify">
+O mașină Turing este echivalentă cu un automat cu stivă modificat prin relaxarea constrângerii de last-in-first-out a stivei acestuia. (Interesant este că această relaxare aparent minoră permite mașinii Turing să execute o largă varietate de calcule, astfel încât ea poate servi ca model pentru capabilitățile computaționale ale tuturor software-urilor moderne.)</p>
+  <h2>Mai exact, o mașină Turing constă din:</h2>
+
+<ol>
+  <li>O bandă împărțită în celule aflate una lângă cealaltă. Fiecare celulă conține un simbol dintr-un alfabet finit. </li>
+  <li>Un cap care poate scrie și citi simboluri pe sau de pe bandă, și care se poate deplasa la stânga sau la dreapta
+</li>
+  <li>Un registru de stare care stochează starea mașinii Turing. Numărul stărilor diferite este întotdeauna finit și există o stare inițială cu care este inițializat registrul de stare.</li>
+  <li>O tabelă de acțiuni (sau funcție de tranziție) care spune mașinii ce simbol să scrie, cum să deplaseze capul ('L' pentru stânga, și 'R' pentru dreapta) și care va fi noua sa stare, date fiind simbolul citit de pe bandă și starea curentă.</li>
+</ol> 
+<h2>Exemplu</h2>
+
+<table>
+  <tr>
+    <th>St.crt</th>
+    <th>Simbol citit</th>
+    <th>Simbol scris</th>
+    <th>Miscare</th>
+    <th>St. noua</th>
+  </tr>
+  <tr>
+    <td>s1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>R</td>
+    <td>s2</td>
+  </tr>
+  <tr>
+    <td>s2</td>
+    <td>1</td>
+    <td>1</td>
+    <td>R</td>
+    <td>s2</td>
+  </tr>
+  <tr>
+   <td>s2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>R</td>
+    <td>s3</td>
+  </tr>
+  <tr>
+    <td>s3</td>
+    <td>0</td>
+    <td>1</td>
+    <td>L</td>
+    <td>s4</td>
+  </tr>
+  <tr>
+    <td>s3</td>
+    <td>1</td>
+    <td>1</td>
+    <td>R</td>
+    <td>s3</td>
+  </tr>
+  <tr>
+    <td>s4</td>
+    <td>1</td>
+    <td>1</td>
+    <td>L</td>
+    <td>s4</td>
+  </tr>
+    <tr>
+    <td>s4</td>
+    <td>0</td>
+    <td>0</td>
+    <td>L</td>
+    <td>s5</td>
+  </tr>
+    <tr>
+    <td>s5</td>
+    <td>1</td>
+    <td>1</td>
+    <td>L</td>
+    <td>s5</td>
+  </tr>
+    <tr>
+    <td>s5</td>
+    <td>0</td>
+    <td>1</td>
+    <td>R</td>
+    <td>s1</td>
+  </tr>
+</table>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
