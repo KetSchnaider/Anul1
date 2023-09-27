@@ -9,6 +9,3 @@ PSA - Marusic ,Mantaluta Marius
 SDA - Burlacu Natalia , Gutu Maria
 TWeb - Bobicev Victoria , Mantaluta Marius
 PP - Braniste Rodica
-
-# Anul2
-PP ( Practica in productie ) - Braniste Rodica
